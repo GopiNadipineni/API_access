@@ -139,7 +139,7 @@ async def get_answers(request: GetAnswersRequest):  # Use the Pydantic model her
     except HTTPException as e:
         return JSONResponse(content={"status": "error", "message": e.detail}, status_code=e.status_code)
 
-# Run the FastAPI application
+'''# Run the FastAPI application
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)'''
