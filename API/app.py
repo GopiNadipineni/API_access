@@ -20,8 +20,8 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
-# Set OpenAI API key
-openai.api_key = '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'
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Mount static files and templates
 app.mount("/static", StaticFiles(directory="static"), name="static")
